@@ -2,13 +2,14 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('trucks', (table) => {
       table.increments().primary()
-      table.string('name')
-      table.string('username')
-      table.string('category')
-      table.object('location')
+      table.text('name')
+      table.text('username')
+      table.text('category')
+      table.float('latitude')
+      table.float('longitude')
   })
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('trucks')
+  return knex.schema.dropTableIfExists('trucks')
 };
