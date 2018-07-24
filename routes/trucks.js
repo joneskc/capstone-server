@@ -12,8 +12,8 @@ const router = module.exports = require('express').Router();
 router.get('/', getAll)
 router.get('/:username', getOne)
 router.post('/', create)
-router.put('/:id', update)
-router.delete('/:id', remove)
+router.put('/:username', update)
+router.delete('/:username', remove)
 
 // TODO: Don't forget data validation/restrictions:
 // - use regex, mongoose, Joi, bookshelf, *schema lib, etc. many options: choose one
@@ -61,7 +61,7 @@ function create(req, res, next) {
 function update(req, res, next) {
     // TODO: Validate input data
     knex('trucks')
-        .where({ id: req.params.id })
+        .where({ username: req.params.username })
         .update(req.body)
         .then(count => count >= 1
             ? res.status(200).json({ data: req.body })
@@ -71,7 +71,7 @@ function update(req, res, next) {
 
 function remove(req, res, next) {
     // TODO: Validate authentication
-    knex('trucks').where({ id: req.params.id })
+    knex('trucks').where({ username: req.params.username })
         .delete()
         .then(count => count >= 1
             ? res.status(204).json()
