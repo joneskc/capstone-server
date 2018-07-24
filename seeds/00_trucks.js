@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
           name: 'Barbed Wire Reef',
           username: 'Barbedwire',
           category: 'Tacos',
-          open: true,
+          open: false,
           latitude: 39.758683,
           longitude: -105.007537
         },{
@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
           name: 'Rolling Italian',
           username: 'Italian',
           category: 'Italian',
-          open: true,
+          open: false,
           latitude: 39.758837,
           longitude: -105.006356
         },{
@@ -26,7 +26,7 @@ exports.seed = function(knex, Promise) {
           name: 'Basic Kneads Pizza',
           username: 'Basickneads',
           category: 'Pizza',
-          open: true,
+          open: false,
           latitude: 39.760379,
           longitude: -105.011399
         },{
@@ -34,7 +34,7 @@ exports.seed = function(knex, Promise) {
           name: 'Burger Chief',
           username: 'Burger',
           category: 'Burgers',
-          open: true,
+          open: false,
           latitude: 39.759191,
           longitude: -105.002859
         }
