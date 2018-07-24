@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
       table.text('name')
       table.text('username')
       table.text('category')
+      table.boolean('open')
       table.float('latitude')
       table.float('longitude')
   })
