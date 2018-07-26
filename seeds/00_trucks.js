@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
           name: 'Barbed Wire Reef',
           username: 'Barbedwire',
           category: 'Tacos',
-          open: false,
+          open: true,
           latitude: 39.758655,
           longitude: -105.007440
         },{
@@ -67,6 +67,14 @@ exports.seed = function(knex, Promise) {
           username: 'Cajun',
           category: 'BBQ',
           open: true,
+          latitude: 39.754004,
+          longitude: -104.994779
+        },{
+          id: 1000009,
+          name: 'Biju\'s',
+          username: 'Biju',
+          category: 'Indian',
+          open: false,
           latitude: 39.754004,
           longitude: -104.994779
         }
